@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+	#wheel{ width:550px;
+			height:550px; 
+			background-color: blue;
+			border: 100%;
+			animation-name: spin;
+			animation-duration: 2s;
+			animation-iteration-count: 1;
+
+		}
+
+	@keyframes spin{ 
+		0%{transform: rotate(0deg);
+			top: 0px;}
+		100%{transform: rotate(360deg);
+			top:0px;}
+
+	</style>
+</head>
+<body>
+<script type="text/javascript">
+	function makeWheel ()
+	{var wheel = document.createElement("div")
+	wheel.style.width = "550px";
+	wheel.style.height = "550px";
+	wheel.style.backgroundColor = "blue";
+	
+	}
+
+</script>
+<div id="wheel"></div>
+</body>
+</html>

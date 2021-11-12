@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+	.sushi{width: 200px;
+		height: 200px;
+		background-image: url(sushi.jpeg);
+
+
+	}
+
+</style>
+</head>
+<body>
+<script type="text/javascript">
+
+	function makeSushi () {
+
+		var sushi = document.createElement("div")
+		document.body.appendChild(sushi)
+		sushi.classList.add('sushi')
+	}
+
+
+	document.addEventListener("click", makeSushi)
+
+
+		
+
+
+</script>
+</body>
+</html>
