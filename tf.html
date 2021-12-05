@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital@1&family=Syncopate:wght@700&display=swap" rel="stylesheet">
+	<style type="text/css">
+
+		#thankyou{
+
+			width: 100%;
+			height: 500px;
+			background-size: auto;
+			background-size:contain;
+			background-repeat: no-repeat;
+			background-image: url(thankful.jpg);
+			position: relative;
+			background-position: center;
+
+
+		}
+#turkey{ width: 125px;
+
+
+
+}
+
+			
+
+		h1{font-size: 50px;
+			color:#ff8c00;
+			text-align: center;
+			font-family: 'Syncopate';
+		
+
+		}
+		h2{font-size: 15px;
+			color:#ff8c00;
+			text-align: center;
+			font-family: sans-serif;
+
+		}
+		body{background-color: #A0522D;
+			background-size: cover;
+			background-repeat: no-repeat;
+
+		}
+
+
+	</style>
+</head>
+<body>
+<h1>Thankful for you bad bitties!</h1>
+<h2>Click to view photos</h2>
+
+<audio id="audio" src=""></audio>
+
+
+<div id="turkey"></div>
+
+	<div id="thankyou" style="background-image: url();"></div>
+
+<script type="text/javascript">
+	var number = 0;
+	document.addEventListener("click", function(event){
+
+		number = number + 1;
+		var click = document.getElementById("thankyou");
+		
+document.addEventListener("click",function changepicture () {
+var number = console.log(number);
+thankyou.style.backgroundImage=list[number];})
+thankyou.style.backgroundImage="url(" + number + ".jpg)";
+
+		console.log(number)
+	if (number%27 ==0) {number = 0;}
+
+})
+
+	function play(){
+		var audio = document.getElementById("audio");
+		audio.play();}
+</script>
+</body>
+</html>
+

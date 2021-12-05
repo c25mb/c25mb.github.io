@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	
+	document.addEventListener("click", function(){
+var box = document.createElement("div")
+var posx = event.clientX
+var posy = event.clientY
+document.body.appendChild(box)
+
+box.style.position = "absolute";
+box.style.left = posx-125/2+"px";
+box.style.top =posy-125/2+"px";
+
+
+
+box.classList.add('object')
+
+})
+</script>
+</body>
+</html>
+

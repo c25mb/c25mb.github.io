@@ -2,35 +2,41 @@
 <html>
 <head>
 	<style type="text/css">
-	#wheel{ width:550px;
-			height:550px; 
-			background-color: blue;
-			border: 100%;
-			animation-name: spin;
-			animation-duration: 2s;
-			animation-iteration-count: 1;
+	#wheel{ width:750px;
+			height:750px; 
+			background-image: url(wheel.png);
+			background-size: contain;
+			background-repeat: no-repeat;
+			margin-top: 150px;
+			background-position: center;
+			transition:2s;
+		/*	border-radius: 100%;*/
 
-		}
+			}
 
-	@keyframes spin{ 
-		0%{transform: rotate(0deg);
-			top: 0px;}
-		100%{transform: rotate(360deg);
-			top:0px;}
+			/*#wheel:hover{
+				transform: rotate(90deg);
+			}*/
 
 	</style>
 </head>
 <body>
+<center><div id="wheel"></div></center>
 <script type="text/javascript">
-	function makeWheel ()
-	{var wheel = document.createElement("div")
-	wheel.style.width = "550px";
-	wheel.style.height = "550px";
-	wheel.style.backgroundColor = "blue";
-	
-	}
+	var wheel = document.getElementById('wheel')
 
+	wheel.addEventListener("click", function() {
+		 console.log("hi montana");
+
+		 var x = 720+ Math.round(Math.random()*1800);
+
+		 wheel.style.transform = 'rotate('+ x +'deg)';
+
+
+	
+	})
+	
 </script>
-<div id="wheel"></div>
+
 </body>
 </html>
