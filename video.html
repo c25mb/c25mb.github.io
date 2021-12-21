@@ -1,93 +1,93 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
 	<style type="text/css">
-		#app {
-  width: 400px;
-  height: 400px;
-  margin: 0 auto;
-  position: relative;
-}
+		
+		*{box-sizing: border-box;
+		padding: 0;
+		margin: 0;
+		outline:none; }
 
-.marker {
-  position: absolute;
-  width: 60px;
-  left: 172px;
-  top: -20px;
-  z-index: 2;
-}
+		body{
+			display: flex;
+			align-items: center;
+			justify-content: center;
 
-.wheel {
-  width: 100%;
-  height: 100%;
-}
 
-.button {
-  display: block;
-  width: 250px;
-  margin: 40px auto;
-  cursor: pointer;
-}
 
-.button:hover {
-  opacity: 0.8;
-}
+		}
 
-.blur {
-  animation: blur 10s;
-}
+		.wheel{
+			position: relative;
+			height: 650px;
+			width: 650px;
 
-@keyframes blur {
-  0% {
-    filter: blur(1.5px);
-  }
-  80% {
-    filter: blur(1.5px);
-  }
-  100% {
-    filter: blur(0px);
-  }
-}
+		}
+
+
+		.sa{width:100%;
+			height:100%;
+			position: relative;
+			border-radius: 50%;
+			border: 8px solid black;
+		}
+
+		span{width: 50%;
+			height: 50%;
+			display: inline-block;
+			position: absolute;
+
+		}
+
+		.spa{clip-path: polygon(0 92%, 100% 50%, 0 8%);
+			background-color: green;
+			top:120px;
+			left: 0;
+
+		}
+		.spb{clip-path: polygon(100% 92%, 0 50%, 100% 8%);
+			background-color: green;
+			top:120px;
+			right: 0;
+
+		}
+
+		.spc{clip-path: polygon(50% 0%, 8% 100%, 92% 100%);
+			background-color: blue;
+			left:120px;
+			bottom:0px;
+
+		}
+		.spd{clip-path: polygon(50% 100%, 92% 0, 8% 0);
+			background-color: blue;
+			left:120px;
+			top:0px ;
+
+		}
 
 	</style>
+
 </head>
 <body>
+	<div class="wheel">
+		<div class="sa">
+			<div class= "sa1">
+				<span class="spa"></span>
+				<span class="spb"></span>
+				<span class="spc"></span>
+				<span class="spd"></span>
+
+			</div>
+		</div>
+
+	</div>
+
+
+
+
 <script type="text/javascript">
 	
-	(function() {
-  const wheel = document.querySelector('.wheel');
-  const startButton = document.querySelector('.button');
-  let deg = 0;
 
-  startButton.addEventListener('click', () => {
-    // Disable button during spin
-    startButton.style.pointerEvents = 'none';
-    // Calculate a new rotation between 5000 and 10 000
-    deg = Math.floor(5000 + Math.random() * 5000);
-    // Set the transition on the wheel
-    wheel.style.transition = 'all 10s ease-out';
-    // Rotate the wheel
-    wheel.style.transform = `rotate(${deg}deg)`;
-    // Apply the blur
-    wheel.classList.add('blur');
-  });
-
-  wheel.addEventListener('transitionend', () => {
-    // Remove blur
-    wheel.classList.remove('blur');
-    // Enable button when spin is over
-    startButton.style.pointerEvents = 'auto';
-    // Need to set transition to none as we want to rotate instantly
-    wheel.style.transition = 'none';
-    // Calculate degree on a 360 degree basis to get the "natural" real rotation
-    // Important because we want to start the next spin from that one
-    // Use modulus to get the rest value from 360
-    const actualDeg = deg % 360;
-    // Set the real rotation instantly without animation
-    wheel.style.transform = `rotate(${actualDeg}deg)`;
-  });
-})();
 </script>
 </body>
 </html>

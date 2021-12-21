@@ -25,6 +25,17 @@
 <script type="text/javascript">
 	var wheel = document.getElementById('wheel')
 
+//this is the function that creates creates the wheel
+// 	function end (){
+// 		var box = document.createElement("div");
+// 		document.body.appendChild(box);
+// 		box.style.width = "700px";
+// 		box.style.height = "400px";
+// 		box.style.backgroundColor = "blue";
+// 		box.style.backgroundPosition = "absolute";
+// }
+
+//this adds an event listener to the wheel and then makes it spin)
 	wheel.addEventListener("click", function() {
 		 console.log("hi montana");
 
@@ -32,9 +43,21 @@
 
 		 wheel.style.transform = 'rotate('+ x +'deg)';
 
+		 function whichDegree () {
 
-	
-	})
+		 	if (x>700) {alert("bye")}
+		 	
+		 	else if (600<x<700){alert("hi")}
+
+		 		else if (x<600){alert("eei")}
+
+		 }
+
+		 setTimeout(whichDegree, 2000)
+
+
+})
+	 
 	
 </script>
 
