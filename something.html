@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+	
+body{
+	background-image: url(confetti.gif);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: #659DBD;
+
+	
+}
+
+#title{
+color: #FBEEC1;
+font-family: sans-serif;
+font-size: 40px;
+position: absolute;
+left: 480px;
+top: 10px;
+
+}
+#p1{
+	font-family: sans-serif;
+	color: #FBEEC1;
+	font-size: 25px;
+	left: 430px;
+	top: 70px;
+	position: absolute;
+}
+#p2{
+	font-family: sans-serif;
+	color: #8A2BE2;
+	font-size: 20px;
+	position: absolute;
+	left: 560px;
+	top: 120px;
+}
+#photo1{
+	height: 250px;
+	width: 250px;
+	background-image: url(sis1.jpg);
+	position: absolute;
+	left: 400px;
+	top: 250px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: orange;
+	border:5px solid #FBEEC1;
+
+}
+#photo2{
+	height: 250px;
+	width: 250px;
+	background-image: url(sis2.jpg);
+	position: absolute;
+	top: 250px;
+	left: 700px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: pink;
+	border:5px solid #FBEEC1;
+}
+#photo3{
+	height: 250px;
+	width: 250px;
+	background-image: url(sis3.jpg);
+	position: absolute;
+	left:400px;
+	top: 525px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: green;
+	border:5px solid #FBEEC1;
+
+}
+#photo4{
+	height: 250px;
+	width: 250px;
+	background-image: url(sis4.jpg);
+	position: absolute;
+	top: 525px;
+	left: 700px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: red;
+	border:5px solid #FBEEC1;
+
+}
+#box1{
+	width: 300px;
+	height: 130px;
+	position: absolute;
+	font-family: sans-serif;
+	top: 200px;
+	left: 50px;
+	text-align: center;
+	font-size: 35px;
+	color: white;
+	display: none;
+
+}
+#box2{
+	width: 300px;
+	height: 165px;
+	position: absolute;
+	font-family: sans-serif;
+	top: 515px;
+	left: 50px;
+	text-align: center;
+	font-size: 35px;
+	color: white;
+	display: none;
+
+}
+#box3{
+	width: 300px;
+	height: 165px;
+	position: absolute;
+	font-family: sans-serif;
+	top: 515px;
+	left: 960px;
+	text-align: center;
+	font-size: 35px;
+	color: white;
+	display: none;
+
+}
+
+#box4{
+	width: 300px;
+	height: 165px;
+	position: absolute;
+	font-family: sans-serif;
+	top: 200px;
+	left: 960px;
+	text-align: center;
+	font-size: 35px;
+	color: white;
+	display: none;}
+</style>
+</head>
+<body>
+<p id="title">My fav things about you</p>
+	<p id="p1">(click on the photo)</p>
+<div id="aug"></div>
+<div id="photo1"></div>
+<div id="photo2"></div>
+<div id="photo3"></div>
+<div id="photo4"></div>
+<div id="box1">"Thank you for always having a good laugh with me and tagging me in ridiculous tiktoks"</div>
+<div id="box2">"Thank you for always caring about me (even when you're mad at me"</div>
+<div id="box3">"Thank you for always getting out the house on time😐"</div>
+<div id="box4">"Thank you for always getting me fries"</div>
+<script type="text/javascript">
+
+photo1.addEventListener("click", function() {
+box1.style.display = 'block';
+    });
+
+photo2.addEventListener("click", function() {
+        box2.style.display = 'block';
+    });
+
+photo3.addEventListener("click", function() {
+        box3.style.display = 'block';
+    });
+photo4.addEventListener("click", function() {
+        box4.style.display = 'block';
+    });
+
+	var number = 0;
+	document.addEventListener("click", function(){
+
+		number = number + 1;
+		var click = document.getElementById("aug");
+}
+
+	)
+</script>
+
+</body>
+</html>
