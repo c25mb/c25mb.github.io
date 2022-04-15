@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+	<script type="text/javascript">
+
+
+		
+		function add (input){
+
+			console.log(input+1)
+
+		}
+
+		
+
+		var toDo = ["walk home", "snack", "watch show", "text someone"]
+
+		var x = -1
+
+document.addEventListener("click", function(){
+			x = x+1;
+			document.body.innerText = toDo[x]
+
+			if (x>=3) {
+				x=-1
+			}
+		})
+	</script>
+
+</body>
+</html>
