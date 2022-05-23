@@ -1,0 +1,78 @@
+<html>
+
+<head>
+    <style>
+        .burger{
+        	left:1000px;
+        	top:800px;
+        	background-size:contain;
+			width:100px;
+			height:100px;
+			background-image:url(hammie.png);
+			transition:.5s;
+			margin:10px;
+			background-position:center;
+			background-repeat: no-repeat;
+			position:absolute;
+		}
+
+       #back{width: 50px;
+            height: 25px;
+            background-color: blue;
+            margin-left: 100%;
+
+        }
+	</style>
+</head>
+
+<body>
+
+<p> burger's eaten: </p><input id="input"></input>
+<audio id="sound" src="eat.mov"> </audio>
+<a href="sleep.html"><div id="back"></div></a>
+ <script type="text/javascript">
+    	var eat = document.getElementById('sound');
+    var input = document.getElementById('input');
+        var x = 0;
+
+    var coronaFunction = function createCorona() {
+        var corona = document.createElement('div');
+        document.body.appendChild(corona);
+        corona.classList.add("burger");
+        // this function creates my hamburgers
+
+        function changePosition() {
+            corona.style.left = 1000 * Math.random() + "px";
+            corona.style.top = 1000 * Math.random() + "px";
+        };
+// this function randomly places my hamburgers
+
+        corona.addEventListener("click", function() {
+            console.log("hi");
+            x = x + 1;
+            input.value = x;
+           if (x>10){
+                clearInterval(coronaFunction)
+            }
+            corona.classList.remove("burger");
+            eat.play();
+
+            
+
+        })
+
+// this is so that everytime a hamburger is clicked, it goes away. It also plays an audio
+
+setInterval(changePosition, 2000)
+
+    };
+    // this makes it so that the position of the hamburgers change every 2 seconds
+setInterval(coronaFunction, 1000);
+
+ // this makes it so that a new hamburger is made every second
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Happy Valentine's Day</title>
+<style type="text/css">
+	#back{display: inline-block;
+		color: blue;
+		margin-right: 900px
+
+	}
+
+	#heart1{
+		z-index:1;
+		width: 175px;
+		height: 175px;
+		border: 1px solid black;
+		position: absolute;
+		left: 50%;
+		top: 150px;
+
+	}
+
+	#heart2{z-index:1;
+		width: 175px;
+		height: 175px;
+		border: 1px solid black;
+		position: absolute;
+		right: 50%;
+		top: 150px;
+
+	}
+#heart3{z-index:1;
+	width: 175px;
+		height: 175px;
+		border: 1px solid black;
+		position: absolute;
+		right: 50%;
+		top: 325px;
+
+	}
+
+	#heart4{z-index:1;
+		width: 175px;
+		height: 175px;
+		border: 1px solid black;
+		position: absolute;
+		left: 50%;
+		top: 325px;
+
+	}
+
+
+#square1{
+	width: 175px;
+		height: 175px;
+		background-image: url(heart1.jpg);
+		background-size: contain;
+		background-repeat: no-repeat;
+		position: absolute;
+		left: 5%;
+		top: 650px;}
+
+#square2{
+	width: 175px;
+		height: 175px;
+		background-image: url(heart2.jpg);
+		background-size: contain;
+		background-repeat: no-repeat;
+		position: absolute;
+		left:30%;
+		top: 650px;}
+
+#square3{
+	width: 175px;
+		height: 175px;
+		background-image: url(heart4.jpg);
+		background-size: contain;
+		background-repeat: no-repeat;
+		position: absolute;
+		left:55%;
+		top: 650px;}
+
+#square4{
+	width: 175px;
+		height: 175px;
+		background-image: url(heart3.jpg);
+		background-size: contain;
+		background-repeat: no-repeat;
+		position: absolute;
+		left:80%;
+		top: 650px;}
+#backgroundheart{
+	z-index:-2 ;
+		height: 650px;
+		width: 650px;
+		background-repeat: no-repeat;
+		background-image: url(heart.png);
+		background-size: cover;
+		
+
+	}
+body{background-color: pink;
+font-size:25px;}
+
+
+</style>
+</head>
+<body>
+click on a photo and move it to a square to complete the puzzle
+<a href="normaug.html"><div id="back">back</div></a>
+<center><div id="backgroundheart"></div></center>
+<!-- <div id="title">Happy Valentine's Day!</div> -->
+<div id="heart1"></div>
+<div id="heart2"></div>
+<div id="heart3"></div>
+<div id="heart4"></div>
+<div id="square1"></div>
+<div id="square2"></div>
+<div id="square3"></div>
+<div id="square4"></div>
+
+
+<script type="text/javascript">
+
+var squareHolder1;
+
+
+var square1 = document.getElementById("square1");
+
+function square1Test (event){
+
+square1.style.position="absolute";
+console.log(event.clientX)
+square1.style.left = event.clientX-87.5 + "px";
+console.log(event.clientY)
+square1.style.top = event.clientY + "px";
+} // end of function//
+
+
+
+square1.addEventListener("click", function moveSquare1 (){
+squareHolder1 = true;
+document.addEventListener("mousemove", square1Test)
+
+
+})
+
+var squareHolder2;
+
+
+var square2 = document.getElementById("square2");
+
+function square2Test (event){
+
+square2.style.position="absolute";
+console.log(event.clientX)
+square2.style.left = event.clientX-87.5 + "px";
+console.log(event.clientY)
+square2.style.top = event.clientY + "px";
+} // end of function//
+
+
+
+square2.addEventListener("click", function moveSquare2 (){
+squareHolder2 = true;
+document.addEventListener("mousemove", square2Test)
+
+
+})
+
+var squareHolder3;
+
+
+var square3 = document.getElementById("square3");
+
+function square3Test (event){
+
+square3.style.position="absolute";
+console.log(event.clientX)
+square3.style.left = event.clientX-87.5 + "px";
+console.log(event.clientY)
+square3.style.top = event.clientY + "px";
+} // end of function//
+
+
+
+square3.addEventListener("click", function moveSquare3 (){
+squareHolder3 = true;
+document.addEventListener("mousemove", square3Test)
+
+
+})
+
+var squareHolder4;
+
+
+var square4 = document.getElementById("square4");
+
+function square4Test (event){
+
+square4.style.position="absolute";
+console.log(event.clientX)
+square4.style.left = event.clientX-87.5 + "px";
+console.log(event.clientY)
+square4.style.top = event.clientY + "px";
+} // end of function//
+
+
+
+square4.addEventListener("click", function moveSquare4 (){
+squareHolder4 = true;
+document.addEventListener("mousemove", square4Test)
+
+
+})
+
+heart1.addEventListener("click", function dropsqaure1 (){
+if (squareHolder1==true) {
+console.log(heart1.style.left)
+
+heart1.appendChild(square1);
+square1.style.position = "relative";
+square1.style.top = "0%"
+square1.style.left = "0%"
+document.removeEventListener("mousemove", square1Test);
+
+}
+if (squareHolder1==true && squareHolder2==true && squareHolder3==true && squareHolder4==true) {
+heart1.style.border = "0px solid black";
+heart2.style.border = "0px solid black"
+heart3.style.border = "0px solid black"
+heart4.style.border = "0px solid black"
+title.style.opacity = "1"
+}
+}
+
+)
+heart2.addEventListener("click", function dropsqaure2 (){
+if (squareHolder2==true) {
+console.log(heart2.style.left)
+
+heart2.appendChild(square2);
+square2.style.position = "relative";
+square2.style.top = "0%"
+square2.style.left = "0%"
+document.removeEventListener("mousemove", square2Test);
+
+}
+if (squareHolder1==true && squareHolder2==true && squareHolder3==true && squareHolder4==true) {
+heart1.style.border = "0px solid black";
+heart2.style.border = "0px solid black"
+heart3.style.border = "0px solid black"
+heart4.style.border = "0px solid black"
+title.style.opacity = "1"
+}
+}
+
+)
+heart3.addEventListener("click", function dropsqaure3 (){
+if (squareHolder3==true) {
+console.log(heart3.style.left)
+
+heart3.appendChild(square3);
+square3.style.position = "relative";
+square3.style.top = "0%"
+square3.style.left = "0%"
+document.removeEventListener("mousemove", square3Test);
+
+}
+if (squareHolder1==true && squareHolder2==true && squareHolder3==true && squareHolder4==true) {
+heart1.style.border = "0px solid black";
+heart2.style.border = "0px solid black"
+heart3.style.border = "0px solid black"
+heart4.style.border = "0px solid black"
+title.style.opacity = "1"
+}
+}
+
+)
+heart4.addEventListener("click", function dropsqaure4 (){
+if (squareHolder4==true) {
+console.log(heart4.style.left)
+
+heart4.appendChild(square4);
+square4.style.position = "relative";
+square4.style.top = "0%"
+square4.style.left = "0%"
+document.removeEventListener("mousemove", square4Test);
+
+}
+if (squareHolder1==true && squareHolder2==true && squareHolder3==true && squareHolder4==true) {
+heart1.style.border = "0px solid black";
+heart2.style.border = "0px solid black"
+heart3.style.border = "0px solid black"
+heart4.style.border = "0px solid black"
+title.style.opacity = "1"
+}
+}
+
+)
+
+</script>
+</body>
+</html>

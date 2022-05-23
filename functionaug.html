@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+	.Bart{width: 200px;
+		height: 200px;
+		background-size: contain;
+		background-image: url(Bart.png);
+		display: inline-grid;
+		position: relative;
+		background-repeat: no-repeat;
+
+	}
+
+
+	</style>
+</head>
+<a href="normaug.html"><body>
+	
+<script type="text/javascript">
+	
+function makeBart() {
+	var Bart = document.createElement("div");
+	document.body.appendChild(Bart)
+	Bart.classList.add("Bart");
+	// body...
+}
+
+setInterval (makeBart, 500);
+
+</script>
+</body></a>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+
+	body{/*background-color: #6699CC;*/
+background-color: #778899;
+font-size:70px;
+color: white;
+text-align: center;
+}
+
+
+#plane{height:800px;
+	width:100% ;
+	background-image: url(aug.png);
+background-size: contain;
+background-repeat: no-repeat;
+position: absolute;
+background-position: center;
+}
+
+/*#plane{
+
+			width: 100%;
+			height: 500px;
+			background-size: auto;
+			background-size:contain;
+			background-repeat: no-repeat;
+			background-image: url(aug.png);
+			position: relative;
+			background-position: center;
+
+
+		}*/
+</style>
+</head>
+<body>
+	Auggie's Journey through my code sketches
+<a href="animationaug.html"><div id="plane"></div></a>
+
+<script type="text/javascript">
+var plane = document.getElementById("plane");
+
+plane.addEventListener("click", function makePlane(){
+plane.style.animationName = "fly";
+})
+
+
+
+</script>
+</body>
+</html>

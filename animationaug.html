@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+#aug{width: 700px;
+	height: 700px;
+	background-image: url(eyes.png);
+background-size: contain;
+background-repeat: no-repeat;
+
+}	
+	#smile{ width:200px;
+			height:200px; 
+			background-image: url(babyhead.png);
+			background-size: contain;
+			position: absolute;
+			animation-name: baby;
+			animation-duration: 5s;
+			animation-iteration-count: 4;
+			margin-left: 50%;
+			opacity: 1px;
+
+		}
+
+	@keyframes baby{ 
+		0%{transform: rotate(-45deg);
+			top: 0px;
+		}
+		25%{transform: rotate(45deg);
+			top:500px;
+		}
+		50%{transform: rotate(80deg);
+		}
+			75%{transform: rotate(80deg);
+		}
+		100%{transform: rotate(0deg);
+			top:0px;
+			}
+
+
+
+	</style>
+	
+
+</head>
+<body>
+<div id="smile"> </div>
+<audio src=""></audio>
+<a href="pres.html"><div id="aug"></div></a>
+</body>
+</html>

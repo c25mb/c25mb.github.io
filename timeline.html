@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style type="text/css">
+		
+		.description{
+			width:150px;
+			height:50px;
+			border:1px solid black;
+			display:inline-block;
+			position: relative;
+			margin:20px;
+		}
+
+		#box1{width: 100px;
+			height: 100px;
+			background-color: blue;
+			display: none;
+
+
+		}
+	</style>
+</head>
+<body>
+<center>
+	<div class="description" id="firstday"> 
+		10/31/21
+	</div>
+		<div class="description">
+			date
+		</div>
+	<div class="description">
+		date
+	</div>
+	<div class="description">
+		date
+	</div>
+
+</center>
+
+
+<hr>
+<div id="box1"></div>
+<script type="text/javascript">
+	var first = document.getElementById("firstday");
+
+first.addEventListener("click", function (){
+	box1.style.display = 'block';
+})
+</script>
+</body>
+</html>
